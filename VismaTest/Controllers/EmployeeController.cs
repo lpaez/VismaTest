@@ -41,9 +41,9 @@ namespace VismaTest.Controllers
             var result = await _employeeService.AddEmployee(employee);
 
             if (!result)
-                return BadRequest(result);
+                return BadRequest("There was an error adding an employee.");
 
-            return Ok(result);
+            return Ok("Employee added succesfully!!");
         }
     }
 }
